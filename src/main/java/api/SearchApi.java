@@ -1,6 +1,6 @@
 package api;
 
-import api.schema.JsonHolder;
+import api.schema.Todos;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
@@ -66,12 +66,12 @@ public class SearchApi {
      * @return this.
      */
     public SearchApi assertHolderApiInformation(final int getId) {
-        final JsonHolder jsonHolder = when().get(baseUrl + TODOS + getId).then().extract().response().as(JsonHolder.class);
+        final Todos todos = when().get(baseUrl + TODOS + getId).then().extract().response().as(Todos.class);
 
-        assertThat(jsonHolder.getId(), equalTo(getId));
-        assertThat(jsonHolder.getTitle(), equalTo("delectus aut autem"));
-        assertThat(jsonHolder.getUserId(), equalTo(getId));
-        assertThat(jsonHolder.isCompleted(), equalTo(false));
+        assertThat(todos.getId(), equalTo(getId));
+        assertThat(todos.getTitle(), equalTo("delectus aut autem"));
+        assertThat(todos.getUserId(), equalTo(getId));
+        assertThat(todos.isCompleted(), equalTo(false));
 
         return this;
     }

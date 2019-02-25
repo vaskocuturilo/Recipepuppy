@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.annotation.Generated;
 
 @Generated("com.robohorse.robopojogenerator")
-public class JsonHolder{
+public class Todos {
 
 	@JsonProperty("id")
 	private int id;
@@ -53,7 +53,7 @@ public class JsonHolder{
 	@Override
  	public String toString(){
 		return 
-			"JsonHolder{" + 
+			"Todos{" +
 			"id = '" + id + '\'' + 
 			",completed = '" + completed + '\'' + 
 			",title = '" + title + '\'' + 
