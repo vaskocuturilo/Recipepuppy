@@ -1,0 +1,73 @@
+package base;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+
+/**
+ * The type Landing page.
+ */
+public class LandingPage extends PageObject {
+
+    /**
+     * Find By main logo.
+     */
+    @FindBy(css = "div.headerhome img")
+    private WebElement mainLogo;
+
+    /**
+     * Find By search button.
+     */
+    @FindBy(css = "input[value='Search']")
+    private WebElement searchButton;
+
+    /**
+     * Find By search field.
+     */
+    @FindBy(css = "input[id='addIng']")
+    private WebElement searchField;
+
+    /**
+     * Instantiates a new Landing page.
+     *
+     * @param webDriver the web driver
+     */
+    public LandingPage(final WebDriver webDriver) {
+        super(webDriver);
+    }
+
+
+    /**
+     * Method is Init.
+     *
+     * @return Return displayed search button.
+     */
+    public boolean isInit() {
+
+        return mainLogo.isDisplayed();
+    }
+
+    /**
+     * Submit method.
+     *
+     * @return driver.
+     */
+    public ReceiptPage submit() {
+        return new ReceiptPage(getDriver());
+    }
+
+
+    /**
+     * Method doSearch.
+     *
+     * @param textValue text of value.
+     * @return driver.
+     */
+    public LandingPage doSearch(final String textValue) {
+        this.searchField.clear();
+        this.searchField.sendKeys(textValue);
+        this.searchButton.click();
+        return this;
+    }
+}
