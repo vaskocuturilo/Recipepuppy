@@ -1,4 +1,4 @@
-package base;
+package ui;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,6 +27,9 @@ public class LandingPage extends PageObject {
     @FindBy(css = "input[id='addIng']")
     private WebElement searchField;
 
+    /**
+     * Find By result.
+     */
     @FindBy(css = "div.result.firstresult > h3 > a")
     private WebElement result;
 

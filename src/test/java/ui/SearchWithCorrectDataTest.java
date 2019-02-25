@@ -1,8 +1,5 @@
 package ui;
 
-import base.BaseClass;
-import base.LandingPage;
-import base.ReceiptPage;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -11,7 +8,7 @@ import static org.testng.Assert.assertTrue;
 public class SearchWithCorrectDataTest extends BaseClass {
 
     @Test(description = "Navigate to Main page > Search Data")
-    public void getResults() {
+    public void testGetResults() {
         LandingPage landingPage = new LandingPage(getDriver());
         assertTrue(landingPage.isInit());
         ReceiptPage receiptPage = landingPage.submit();
