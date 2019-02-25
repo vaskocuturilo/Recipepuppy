@@ -4,6 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
+import static org.testng.AssertJUnit.assertEquals;
+
 
 /**
  * The type Landing page.
@@ -27,6 +31,9 @@ public class LandingPage extends PageObject {
      */
     @FindBy(css = "input[id='addIng']")
     private WebElement searchField;
+
+    @FindBy(css = "div.result.firstresult > h3 > a")
+    private WebElement result;
 
     /**
      * Instantiates a new Landing page.
@@ -69,5 +76,16 @@ public class LandingPage extends PageObject {
         this.searchField.sendKeys(textValue);
         this.searchButton.click();
         return this;
+    }
+
+
+    /**
+     * Method doResult.
+     *
+     * @return text.
+     */
+    public String doResult() {
+
+        return result.getText();
     }
 }
