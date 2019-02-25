@@ -1,3 +1,5 @@
+package ui;
+
 import base.BaseClass;
 import base.LandingPage;
 import base.ReceiptPage;
@@ -6,7 +8,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class SearchWithCorrectData extends BaseClass {
+public class SearchWithCorrectDataTest extends BaseClass {
 
     @Test(description = "Navigate to Main page > Search Data")
     public void getResults() {

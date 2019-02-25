@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke automation scripts">
+    <test name="User interface search test">
+        <packages>
+            <package name="ui.*" />
+        </packages>
+    </test>
+    <test name="Rest api search test">
+        <packages>
+            <package name="api.*" />
+        </packages>
+    </test>
+</suite>

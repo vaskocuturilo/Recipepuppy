@@ -1,4 +1,4 @@
-package api.schema;
+package restapi.schema;
 
 import java.util.List;
 

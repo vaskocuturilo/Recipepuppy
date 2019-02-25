@@ -1,4 +1,4 @@
-package api.schema;
+package restapi.schema;
 
 public class ResultsItem{
 	private String thumbnail;
