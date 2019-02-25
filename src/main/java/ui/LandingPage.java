@@ -1,8 +1,11 @@
 package ui;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import static org.testng.AssertJUnit.assertEquals;
 
 /**
  * The type Landing page.
@@ -86,4 +89,16 @@ public class LandingPage extends PageObject {
 
         return result.getText();
     }
+
+    /**
+     * Method checkThatPageIsCompletelyLoaded.
+     *
+     * @return this.
+     */
+    public LandingPage checkThatPageIsCompletelyLoaded() {
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) getDriver();
+        assertEquals("complete", javascriptExecutor.executeScript("return document.readyState"));
+        return this;
+    }
+
 }
