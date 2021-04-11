@@ -26,7 +26,18 @@
 ## Instructions how to run:
 Execute command 
 to run test ```gradle clean test```
-to generate report ```gradle allureReport, gradle allureServe```
+
+### Generate Allure report 
+
+```gradle allure:report```
+
+### Open Allure report in browser
+
+```gradle allure:serve```
+
+**List of technologies**: Java 8, Gradle, Selenide/Selenium, TestNG, Allure, PageObject.
+
+**Note**: You should have installed Chrome browser, Gradle.
 
 ![](https://b.radikal.ru/b12/1902/b7/e8e6608e5f29.png)
 
